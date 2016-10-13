@@ -1,0 +1,10 @@
+
+language: java
+before_install: 
+- mvn install
+- mvn install -DskipTests=true
+install: mvn test
+notifications:
+  email: false
+after_success:
+- mvn clean cobertura:cobertura coveralls:report

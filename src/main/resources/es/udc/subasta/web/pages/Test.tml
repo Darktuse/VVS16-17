@@ -1,0 +1,24 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+   <t:form>
+      <p>
+         <t:errors />
+      </p>
+      <p>
+         <t:select t:id="carMaker" validate="required"
+                   zone="modelZone" />
+      </p>
+      
+      <t:zone t:id="modelZone" id="modelZone">
+         <t:if test="carMaker">
+           <p>
+              <t:select t:id="carModel" model="availableModels" validate="required"/>
+           </p>
+         </t:if>
+      </t:zone>
+      
+      <p>
+         <t:submit value="literal:Submit" />
+      </p>
+   </t:form>
+
+</html>
