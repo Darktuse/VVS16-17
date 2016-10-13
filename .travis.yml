@@ -1,6 +1,8 @@
 language: java
 before_install:
-   - mvn install -DskipTests=true
+   - mvn install:install-file -Dfile=pojo-modelutil-2.2.0.jar -DgroupId=es.udc.pojo -DartifactId=pojo-modelutil -Dversion=1 -Dpackaging=jar
 install: mvn test
 notifications:
    email: false
+services:
+   mysql

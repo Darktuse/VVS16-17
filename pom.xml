@@ -183,11 +183,6 @@
     		<version>${tapestry.version}</version>
 		</dependency>
         <!-- POJO-Examples Model Util -->
-        <dependency>
-            <groupId>es.udc.pojo</groupId>
-            <artifactId>pojo-modelutil</artifactId>
-            <version>${pojo-modelutil.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
