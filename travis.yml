@@ -1,9 +1,9 @@
 language: JAVA
-before_install: 
-- mvn sql:execute
-- mvn install -DskipTests=true
+before_install:
+	- mvn sql:execute
+	- mvn install -DskipTests=true
 install: mvn test
 notifications:
-  email: false
+	email: false
 after_success:
 - mvn clean cobertura:cobertura coveralls:report
