@@ -1,7 +1,6 @@
-
-language: java
+language: JAVA
 before_install: 
-- mvn install
+- mvn sql:execute
 - mvn install -DskipTests=true
 install: mvn test
 notifications:
